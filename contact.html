@@ -1,0 +1,69 @@
+<html>
+<head>
+
+   <title>insert your data</title>
+   <style>
+    body{
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+   </style>
+   <script src="jquery-2.1.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+ $("input").focus(function(){
+  $(this).css("background-color","#Daa520");});
+ $("input").blur(function(){
+  $(this).css("background-color","white");});
+});
+</script>
+<script type ="text/javascript">
+function validate()
+{
+var fname=document.f1.fname.value;
+var str=fname.charAt(0);
+if(str=="*"||str=="1"||str=="0")
+{alert("your name must begin with letter");}
+if(document.f1.mail.value.indexof("@")==-1||
+document.f1.mail.value.indexof(".")==-1)
+{alert("type your email correctly ");}
+var pw=document.f1.pass.value;
+var cpw=document.f1.cpass.value;
+if(pw.length<7)
+{alert("password must be at least 7 char ");}
+if(pw!=cpw)
+{alert("renter your pass correctly");}
+}
+
+
+
+
+</script>
+</head>
+<body background="k13.jpg">
+    <a href="F:/my projects/Hotellll/hotel.html"><input type="button" name="button" value="Back home"></a>
+    <pre>
+<h1><b><i><u><center><font color="#000000">Contact With Us</font></center></u></i></b></h1>
+<p align="left"><font color="#800000"><h2><b><i>If you want to reserve a room in noor elamar<br>hotel,You must enter your required data:</i></b></h2></font></p><form name="f1"><h3>
+Your Name   : <input type ="text" name="fname">                                          Date of arrival :<input type="text" name="adate"><br>
+Your Address: <input type ="text" name="address">                                          Date of depature:<input type="text" name="ddate"><br>
+DateOf Birth: <input type ="text" name="bdate">                                          Number of rooms :<input type="text" name="number"><br> 
+Nationality : <input type ="text" name="nationality"><br>
+Your  Email : <input type ="text" name="mail"><br>
+password    : <input type ="password" name="pass"><br>
+Cpassword   : <input type="password" name="cpass"><br></h3>
+    </pre>
+    <pre>
+<h1>You are.....               Room with.....</h1>
+<h2><input type="radio" name="gender">Male                              <input type="radio" name="bed">One bed</h2>
+<h2><input type="radio" name="gender">Female                            <input type="radio" name="bed">Two beds</h2>                                               
+    </pre>
+    <p><h2> The average price for one night (536 : 1.290) EG</h2></p><br>
+<h3>Enter price : <input type="text" name="price"></h3><br><br>
+ <textarea name="ar1" rows="6" cols="80">Enter any additional notes......</textarea><br><br>
+ <pre><input type="Submit" onclick="validate()">         <input type="Reset" onclick="validate()"></pre><br><br><br>
+<object>
+<embed src='mm.mp3' width="145" height="61">
+</object>
+</body>
+</html>
